@@ -21,10 +21,11 @@ class ViewController: UIViewController {
                 // do nothing
             }
             print("Operation \"A\" finished")
-            print("\(Thread.isMainThread)")
+            print("\(Thread.isMainThread)") //if you check this in OperationQueue.main case it shows true, in our custuom queue- false
         }
-//        OperationQueue.main.addOperation(operation)
+//        OperationQueue.main.addOperation(operation) if we use this queue the operation is executing in the main thread
         operationQueue.addOperation(operation)
+        //if we use our custom thread it uses backround thread
     }
     
     
