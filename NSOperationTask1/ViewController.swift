@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         }
 //        OperationQueue.main.addOperation(operation) if we use this queue the operation is executing in the main thread
         operationQueue.addOperation(operation)
-        //if we use our custom thread it uses backround thread
+        //if we use our custom queue it uses backround thread
     }
     
     
